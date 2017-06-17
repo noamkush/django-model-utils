@@ -4,17 +4,17 @@ from django.db import models
 from django.db.models.fields.related import OneToOneField, OneToOneRel
 from django.db.models.query import QuerySet
 try:
-    from django.db.models.query import BaseIterable, ModelIterable
+    from django.db.models.query import ModelIterable
 except ImportError:
     # Django 1.8 does not have iterable classes
-    BaseIterable = object
+    ModelIterable = object
 from django.core.exceptions import ObjectDoesNotExist
 
 from django.db.models.constants import LOOKUP_SEP
 from django.utils.six import string_types
 
 
-class InheritanceIterable(BaseIterable):
+class InheritanceIterable(ModelIterable):
     def __iter__(self):
         queryset = self.queryset
         iter = ModelIterable(queryset)
