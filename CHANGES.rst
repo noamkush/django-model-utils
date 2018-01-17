@@ -4,6 +4,18 @@ CHANGES
 master (unreleased)
 -------------------
 
+3.1.1 (2017.12.17)
+------------------
+
+- Update classifiers and README via GH-306, fixes GH-305
+
+3.1.0 (2017.12.11)
+------------------
+
+- Support for Django 2.0 via GH-298, fixes GH-297
+- Remove old travis script via GH-300
+- Fix codecov and switch to py.test #301
+
 3.0.0 (2017.04.13)
 ------------------
 
